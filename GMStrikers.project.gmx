@@ -62,6 +62,7 @@
         <sprite>sprites\spr_ui_button_Bomb</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\sprite31</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

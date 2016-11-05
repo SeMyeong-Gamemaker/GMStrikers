@@ -58,7 +58,8 @@ font_number = font_add_sprite_ext(spr_ui_number_font,"0123456789",true,4);</code
     <instance objName="obj_f4u" x="416" y="39872" name="inst_6161212F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
-    <tile bgName="background2" x="288" y="38560" w="261" h="1761" xo="0" yo="0" id="10000009" name="inst_A977B472" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background2" x="288" y="39264" w="261" h="1761" xo="0" yo="0" id="10000009" name="inst_A977B472" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background2" x="288" y="-768" w="261" h="1761" xo="0" yo="0" id="10000010" name="inst_BB026586" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

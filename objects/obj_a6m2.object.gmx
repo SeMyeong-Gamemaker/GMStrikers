@@ -148,7 +148,7 @@
         angle = floor(angle /10) * 10
         }
     } else if attack_mode = 1.5 {
-        if angle != 90 {
+        if angle != 80 {
         vspeed = -2
         angle -= 5;
         } else  attack_mode = 2  
@@ -161,7 +161,7 @@
         angle = floor(angle /10) * 10
         }
     } else if attack_mode = 2.5 {
-        if angle != 270 {
+        if angle != 260 {
         vspeed = 2
         angle += 5;
         } else attack_mode = 1
