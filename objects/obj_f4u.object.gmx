@@ -39,6 +39,10 @@
     KeyLeft = 0;
     KeyRight = 0;
     KeyFire = 0;
+    MouseUp = 0;
+    MouseLeft = 0;
+    MouseDown = 0;
+    MouseRight = 0;
 
     // 사격 관련
     fire_order = 1;        
@@ -120,7 +124,10 @@
     KeyRight = keyboard_check ( ord ( 'D' ) );
     KeyFire = keyboard_check ( ord ( 'J' ) );
     KeyExtraFire = keyboard_check ( ord ( 'K' ) );
-
+    if MouseUp { KeyUp = true }
+    if MouseLeft { KeyLeft = true }
+    if MouseDown { KeyDown = true }
+    if MouseRight { KeyRight = true }
     
     // 이동 각도 설정 
     

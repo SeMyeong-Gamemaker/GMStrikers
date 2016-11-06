@@ -52,7 +52,7 @@
       <sprite>sprites\spr_ui_number_font</sprite>
       <sprite>sprites\spr_ui_score</sprite>
       <sprites name="UI_Control_button">
-        <sprite>sprites\spr_ui_button_Up</sprite>
+        <sprite>sprites\spr_ui_button</sprite>
         <sprite>sprites\spr_ui_button_Right</sprite>
         <sprite>sprites\spr_ui_button_Down</sprite>
         <sprite>sprites\spr_ui_button_Left</sprite>
@@ -97,7 +97,7 @@
     </objects>
     <objects name="UI">
       <objects name="Contol Button">
-        <object>objects\obj_ui_button_Up</object>
+        <object>objects\obj_ui_button</object>
         <object>objects\obj_ui_button_Right</object>
         <object>objects\obj_ui_button_Down</object>
         <object>objects\obj_ui_button_Left</object>
