@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spawn_delay = 120
-spawn_place = 2
-var spawn_y,i
+            <string>spawn_delay = 120;
+spawn_remain = 0;
+spawn_order = 1;
+attack_mode = 1
+time = 0;
 </string>
           </argument>
         </arguments>
@@ -50,49 +52,28 @@ var spawn_y,i
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-        var i=irandom(1);
-    var spawn_y;
-    if(i){
-        spawn_y=800;
-    } else {
-        spawn_y=500;
-    }
-    
-    
+            <string>   
 
     if spawn_delay &lt;= 0 
     {
-        spawn_place = irandom_range(1,2)
-        //if spawn_place = 1 {spawn_place = 2} else if spawn_place = 2 {spawn_place = 1}
-        if spawn_place = 1 
-        { 
-            if instance_number(obj_a6m3_22) &gt;= 5 
-            {
-                spawn_delay = 600
-            } 
-            else 
-            {
-            instance_create( -20, spawn_y, obj_a6m3_22 ) 
-            spawn_delay = 100
-            } 
-            } 
-            else spawn_place = 2 
-            {
-            if instance_number(obj_a6m3_22) &gt;= 5 
-            {   
-                spawn_delay = 300
-            } 
-            else 
-            {
-            instance_create( 920, spawn_y, obj_a6m3_22 )
-            spawn_delay = 100
+        if spawn_remain &gt; 0 
+        {
+            spawn_remain --;
+            spawn_delay += 50;
+            instance_create(view_yview[0] -100,view_yview[0] -100,obj_a6m3_22)
+            
+            if spawn_order = 3 {
+            attack_mode = 1;
             }
         }
-    } else spawn_delay --
+    } else spawn_delay --;
     
     
-
+    if UI_SYS.time = room_speed * 12 {
+    spawn_order = 3;
+    spawn_remain = 1;
+    } 
+    
 </string>
           </argument>
         </arguments>

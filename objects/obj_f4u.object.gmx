@@ -39,6 +39,7 @@
     KeyLeft = 0;
     KeyRight = 0;
     KeyFire = 0;
+
     // 사격 관련
     fire_order = 1;        
     fire_delay = 0;        //기본무장
@@ -113,12 +114,13 @@
     
     // 키 체크
     
-    KeyUp = keyboard_check( ord ( 'W' ) );
+    KeyUp = keyboard_check( ord ( 'W' ) ); 
     KeyLeft = keyboard_check ( ord ( 'A' ) );
     KeyDown = keyboard_check ( ord ( 'S' ) );
     KeyRight = keyboard_check ( ord ( 'D' ) );
     KeyFire = keyboard_check ( ord ( 'J' ) );
     KeyExtraFire = keyboard_check ( ord ( 'K' ) );
+
     
     // 이동 각도 설정 
     

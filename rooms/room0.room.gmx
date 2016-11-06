@@ -33,9 +33,9 @@ font_number = font_add_sprite_ext(spr_ui_number_font,"0123456789",true,4);</code
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="background0" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="1" stretch="0"/>
-    <background visible="-1" foreground="-1" name="background1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="background3" x="0" y="-18400" htiled="-1" vtiled="-1" hspeed="0" vspeed="2" stretch="0"/>
+    <background visible="-1" foreground="0" name="background_water_1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="1" stretch="0"/>
+    <background visible="-1" foreground="0" name="background_cloud_1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="" x="0" y="-18400" htiled="-1" vtiled="-1" hspeed="0" vspeed="2" stretch="0"/>
     <background visible="0" foreground="0" name="" x="350" y="300" htiled="0" vtiled="0" hspeed="0" vspeed="5" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,10 +56,10 @@ font_number = font_add_sprite_ext(spr_ui_number_font,"0123456789",true,4);</code
     <instance objName="UI_SYS" x="0" y="0" name="inst_1216EEEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_a6m2_spawner" x="32" y="0" name="inst_82D15F15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_f4u" x="416" y="39872" name="inst_6161212F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_a6m3_22_spawner" x="64" y="0" name="inst_559621D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
-    <tile bgName="background2" x="288" y="39264" w="261" h="1761" xo="0" yo="0" id="10000009" name="inst_A977B472" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="background2" x="288" y="-768" w="261" h="1761" xo="0" yo="0" id="10000010" name="inst_BB026586" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background_USS_6" x="288" y="39584" w="261" h="1761" xo="0" yo="0" id="10000013" name="inst_CFB5F651" depth="0" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

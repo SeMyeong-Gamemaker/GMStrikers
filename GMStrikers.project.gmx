@@ -9,6 +9,7 @@
     <sound>sound\sound_engine_1</sound>
     <sound>sound\sound_rocket</sound>
     <sound>sound\sound_gun_hit</sound>
+    <sound>sound\sound_explosion_1</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player_Plane">
@@ -27,6 +28,7 @@
       <sprite>sprites\spr_a6m</sprite>
       <sprites name="A6M2">
         <sprite>sprites\spr_a6m2</sprite>
+        <sprite>sprites\sprite32</sprite>
         <sprite>sprites\spr_a6m2_turn_left</sprite>
         <sprite>sprites\spr_a6m2_turn_right</sprite>
       </sprites>
@@ -65,10 +67,9 @@
     <sprite>sprites\sprite31</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
-    <background>background\background1</background>
-    <background>background\background2</background>
-    <background>background\background3</background>
+    <background>background\background_water_1</background>
+    <background>background\background_cloud_1</background>
+    <background>background\background_USS_6</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -103,6 +104,7 @@
       </objects>
       <object>objects\UI_SYS</object>
     </objects>
+    <object>objects\obj_explosion_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
