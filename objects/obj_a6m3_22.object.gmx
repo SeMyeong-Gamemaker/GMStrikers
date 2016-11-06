@@ -34,6 +34,7 @@
     move_turn_angle = 0;
     move_turn_way = 0
     angle = 0;
+    lifetime = room_speed * 10 
     image_xscale = 1
     image_yscale = 1
 //  attack_repeat = 0;
@@ -125,6 +126,13 @@
     angle = 0
     }
     
+    if lifetime &lt;= 0 {
+    if y &lt; view_yview[0] - 200 instance_destroy ( )
+    if y &gt; view_yview[0] + 1800 instance_destroy ( )
+    if x &lt; 0 - 200 instance_destroy ( )
+    if x &gt; room_width + 200 instance_destroy ( )
+    } else lifetime --;
+        
     if fire_delay &lt;= 0{
     instance_create( x, y, obj_enemy_bullet );
     fire_delay = 90;

@@ -54,10 +54,10 @@ fire_angle = point_direction(x,y,near_enemy.x,near_enemy.y)
     y += lengthdir_y(8,fire_angle)
     x += lengthdir_x(8,fire_angle)
     
-    if y &lt; 0 instance_destroy ( )
-    if y &gt; room_height instance_destroy ( )
-    if x &lt; 0 instance_destroy ( )
-    if x &gt; room_width instance_destroy ( )
+    if y &lt; view_hview[0] - 200 instance_destroy ( )
+    if y &gt; view_hview[0] + 1600 + 200 instance_destroy ( )
+    if x &lt; 0 - 200 instance_destroy ( )
+    if x &gt; room_width + 200 instance_destroy ( )
 </string>
           </argument>
         </arguments>

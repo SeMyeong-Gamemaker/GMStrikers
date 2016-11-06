@@ -52,7 +52,7 @@
     
     extra_fire_order = 0;
     extra_fire_delay = 0;  //로켓
-    extra_ra = 8;
+    extra_ra = 99;
     
     gun_type = 0
 
