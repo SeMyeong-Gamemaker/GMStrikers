@@ -10,6 +10,7 @@
     <sound>sound\sound_rocket</sound>
     <sound>sound\sound_gun_hit</sound>
     <sound>sound\sound_explosion_1</sound>
+    <sound>sound\sound_rocket_hit</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Player_Plane">
