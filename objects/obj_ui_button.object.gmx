@@ -63,8 +63,11 @@
         {
         if mouse_check_button(mb_left) {
         obj_f4u.MouseUp = true obj_f4u.MouseLeft = false obj_f4u.MouseDown = false obj_f4u.MouseRight = false } else obj_f4u.MouseUp = false    // 위쪽
-        } 
-        else if ( mouse_y &gt;= view_yview[0]+1430 &amp;&amp; mouse_y &lt;= view_yview[0]+1560 ) 
+        }
+    }
+    else if ( mouse_x &gt;= 160 &amp;&amp; mouse_x &lt;=  296 ) 
+    {
+        if ( mouse_y &gt;= view_yview[0]+1430 &amp;&amp; mouse_y &lt;= view_yview[0]+1560 ) 
         {
         if mouse_check_button(mb_left) {
         obj_f4u.MouseDown = true obj_f4u.MouseUp = false obj_f4u.MouseLeft = false obj_f4u.MouseRight = false } else obj_f4u.MouseDown = false  // 아래쪽 
