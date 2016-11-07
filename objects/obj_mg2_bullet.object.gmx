@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>
-    bullet_angle = obj_f4u.bullet_angle + random_range( -2 ,2 ) 
+    bullet_angle = obj_f4u.bullet_angle + irandom_range( -obj_f4u.fire_power ,obj_f4u.fire_power ) 
+    bullet_speed = 35 + irandom_range(-5,5)
     image_angle = bullet_angle - 90
 </string>
           </argument>
@@ -50,9 +51,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-    x += lengthdir_x ( 35, bullet_angle );   
-    y += lengthdir_y ( 35, bullet_angle );
+            <string>    
+    x += lengthdir_x ( bullet_speed, bullet_angle );   
+    y += lengthdir_y ( bullet_speed, bullet_angle );
     if y &lt; view_yview[0] - 200 instance_destroy ( )
     if y &gt; view_yview[0] + 1800 instance_destroy ( )
     if x &lt; 0 - 200 instance_destroy ( )
@@ -82,9 +83,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.hp -= 2;
-audio_play_sound( sound_gun_hit ,0 ,0);
-instance_destroy();
+            <string>
+    other.hp -= 2;
+    audio_play_sound( sound_gun_hit ,0 ,0);
+    instance_destroy();
 </string>
           </argument>
         </arguments>

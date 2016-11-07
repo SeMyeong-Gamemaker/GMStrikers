@@ -32,16 +32,16 @@
     } else target_point = 0
     if obj_f4u.x &gt; x 
     {
-    rocket_angle = random_range ( 95, 100 ) + obj_f4u.bullet_angle -90 + random_range( -2 ,2 ) 
+    rocket_angle = irandom_range ( 95, 100 ) + obj_f4u.bullet_angle -90 + irandom_range( -2 ,2 ) 
     }
     else 
     {
-        rocket_angle = random_range ( 85, 80 ) + obj_f4u.bullet_angle -90 + random_range( -2 ,2 ) 
+        rocket_angle = irandom_range ( 85, 80 ) + obj_f4u.bullet_angle -90 + irandom_range( -2 ,2 ) 
     }
-    rocket_speed = random_range ( 8, 12 )
-    rocket_speed_max = random_range ( 16, 32 )
-    follow_fuse = random_range ( 10, 20 )
-    follow_rockon = random_range ( 2, 6 )
+    rocket_speed = irandom_range ( 8, 12 )
+    rocket_speed_max = irandom_range ( 16, 32 )
+    follow_fuse = irandom_range ( 10, 20 )
+    follow_rockon = irandom_range ( 2, 6 )
     scm = 0;
     
     
@@ -97,8 +97,8 @@
     if x &lt; 0 - 200 instance_destroy ( )
     if x &gt; room_width + 200 instance_destroy ( )
     
-    repeat(random_range(3,6)){
-    instance_create(x+random_range(2,4),y+random_range(4,6),obj_hvar_rocket_somke)
+    repeat(irandom_range(3,6)){
+    instance_create(x+irandom_range(2,4),y+irandom_range(4,6),obj_hvar_rocket_somke)
     }
     
     if follow_rockon &gt; 0 {
@@ -118,10 +118,10 @@
         if follow_fuse &lt;= 0 {
             follow_rockon --;
             if rocket_angle &gt; target_point {
-            rocket_angle -= random_range ( 5, 10 )
+            rocket_angle -= irandom_range ( 5, 10 )
             }
             else if rocket_angle &lt; target_point {
-            rocket_angle += random_range ( 5, 10 )
+            rocket_angle += irandom_range ( 5, 10 )
             }
         }
         else follow_fuse --;

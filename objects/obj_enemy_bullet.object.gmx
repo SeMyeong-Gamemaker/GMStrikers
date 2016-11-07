@@ -80,8 +80,9 @@ fire_angle = point_direction(x,y,near_enemy.x,near_enemy.y)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>other.hp --;
-instance_destroy();
+            <string>
+    other.hp --;
+    instance_destroy();
 </string>
           </argument>
         </arguments>

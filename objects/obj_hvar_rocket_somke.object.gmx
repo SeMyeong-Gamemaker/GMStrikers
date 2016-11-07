@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scm = 0
-image_xscale = random_range(1.8,2.2)
-image_yscale = random_range(1.8,2.2)
+            <string>
+        scm = 0
+    image_xscale = irandom_range(1.8,2.2)
+    image_yscale = irandom_range(1.8,2.2)
 </string>
           </argument>
         </arguments>
@@ -51,7 +52,7 @@ image_yscale = random_range(1.8,2.2)
           <argument>
             <kind>1</kind>
             <string>
-    if scm &gt;= random_range ( 2, 8 ) {
+    if scm &gt;= irandom_range ( 2, 8 ) {
     image_xscale --
     image_yscale --
     scm = 0

@@ -47,6 +47,7 @@
     // 사격 관련
     fire_order = 1;        
     fire_delay = 0;        //기본무장
+    fire_power = 1;
     
     fire_cannon_delay = 0; //기관포
     
@@ -172,25 +173,65 @@
     
         if gun_type = 0 {
             if fire_delay &lt;= 0 {
+                if fire_power = 1 {                                     //1단계
+                    if fire_order = 1 {
+                    instance_create ( x - 24, y - 39, obj_mg2_bullet );
+                    audio_play_sound ( sound_mg2 ,0 ,0 );
+                    fire_order = 2;
+                    fire_delay +=6;
+                    } else if fire_order = 2 {
+                    instance_create ( x + 25, y - 39, obj_mg2_bullet );
+                    audio_play_sound ( sound_mg2 ,0 ,0 );
+                    fire_order = 1;         
+                    fire_delay +=6;                
+                    }
+                } else if fire_power = 2 {                              //2단계
+                if fire_order = 1 {
+                    instance_create ( x - 24, y - 39, obj_mg2_bullet );
+                    instance_create ( x + 37, y - 39, obj_mg2_bullet );     
+                    audio_play_sound ( sound_mg2 ,0 ,0 );
+                    fire_order = 2;             
+                    fire_delay += 6;       
+                } else {
+                    instance_create ( x + 25, y - 39, obj_mg2_bullet );              
+                    instance_create ( x - 36, y - 39, obj_mg2_bullet );   
+                    audio_play_sound ( sound_mg2 ,0 ,0 );
+                    fire_order = 1;
+                    fire_delay += 6;               
+                } } else if fire_power = 3 {                            //3단계
+                if fire_order = 1 {
+                    instance_create ( x - 24, y - 39, obj_mg2_bullet );
+                    instance_create ( x + 25, y - 39, obj_mg2_bullet );                              
+                    instance_create ( x + 31, y - 39, obj_mg2_bullet );  
+                    audio_play_sound ( sound_mg2 ,0 ,0 );
+                    fire_order = 2;
+                    fire_delay += 6; 
+                } else {
+                    instance_create ( x - 30, y - 39, obj_mg2_bullet );                   
+                    instance_create ( x - 36, y - 39, obj_mg2_bullet );                
+                    instance_create ( x + 37, y - 39, obj_mg2_bullet );          
+                    audio_play_sound ( sound_mg2 ,0 ,0 );
+                    fire_order = 1;
+                    fire_delay += 6;   
+                } } else if fire_power = 4 {                            //4단계
                 if fire_order = 1 {
                     instance_create ( x - 24, y - 39, obj_mg2_bullet );
                     instance_create ( x + 25, y - 39, obj_mg2_bullet );                
+                    instance_create ( x - 30, y - 39, obj_mg2_bullet );                
+                    instance_create ( x + 31, y - 39, obj_mg2_bullet );  
                     audio_play_sound ( sound_mg2 ,0 ,0 );
                     fire_order = 2;
-                    fire_delay += 5; 
-                } else if fire_order = 2 {
-                    instance_create ( x - 30, y - 39, obj_mg2_bullet );                
-                    instance_create ( x + 31, y - 39, obj_mg2_bullet );           
-                    audio_play_sound ( sound_mg2 ,0 ,0 );
-                    fire_order = 3;
-                    fire_delay += 5;   
-                } else { 
+                    fire_delay += 6;
+                } else {
+                    instance_create ( x - 24, y - 39, obj_mg2_bullet );
+                    instance_create ( x + 25, y - 39, obj_mg2_bullet );    
                     instance_create ( x - 36, y - 39, obj_mg2_bullet );                
-                    instance_create ( x + 37, y - 39, obj_mg2_bullet );                
+                    instance_create ( x + 37, y - 39, obj_mg2_bullet );   
                     audio_play_sound ( sound_mg2 ,0 ,0 );
                     fire_order = 1;
-                    fire_delay += 5; 
-                } } else {
+                    fire_delay += 6;
+                } 
+               } } else {
             fire_delay --;
             }
         }
