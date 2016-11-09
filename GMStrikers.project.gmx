@@ -66,6 +66,8 @@
       </sprites>
     </sprites>
     <sprite>sprites\sprite31</sprite>
+    <sprite>sprites\spr_item_powerup_small</sprite>
+    <sprite>sprites\spr_item_powerup_big</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background_water_1</background>
@@ -79,8 +81,10 @@
   <objects name="objects">
     <objects name="Player">
       <objects name="Plane">
-        <object>objects\obj_f4u</object>
         <object>objects\obj_player_base</object>
+        <objects name="F4U">
+          <object>objects\obj_f4u</object>
+        </objects>
       </objects>
       <objects name="Bullet">
         <object>objects\obj_mg2_bullet</object>
@@ -88,13 +92,21 @@
         <object>objects\obj_hvar_rocket_somke</object>
       </objects>
     </objects>
-    <objects name="Enime">
+    <objects name="Enemy">
       <object>objects\obj_enemy_base</object>
-      <object>objects\obj_enemy_bullet</object>
-      <object>objects\obj_a6m2_spawner</object>
-      <object>objects\obj_a6m3_22_spawner</object>
-      <object>objects\obj_a6m2</object>
-      <object>objects\obj_a6m3_22</object>
+      <objects name="Plane">
+        <objects name="A6M2">
+          <object>objects\obj_a6m2</object>
+          <object>objects\obj_a6m2_spawner</object>
+        </objects>
+        <objects name="A6M3_22">
+          <object>objects\obj_a6m3_22</object>
+          <object>objects\obj_a6m3_22_spawner</object>
+        </objects>
+      </objects>
+      <objects name="Bullet">
+        <object>objects\obj_enemy_bullet</object>
+      </objects>
     </objects>
     <objects name="UI">
       <objects name="Contol Button">
@@ -105,7 +117,12 @@
       </objects>
       <object>objects\UI_SYS</object>
     </objects>
-    <object>objects\obj_explosion_1</object>
+    <objects name="Effect">
+      <object>objects\obj_explosion_1</object>
+    </objects>
+    <objects name="Item">
+      <object>objects\obj_item_powerup</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

@@ -3,7 +3,7 @@
   <spriteName>spr_a6m2</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>obj_enemy_base</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -33,9 +33,11 @@
     move_turn_way = 0;
     move_turn_mode = 0;
     move_speed = 4;
-    
+    drop_check = 0;
+    i = irandom_range(0,100)
+    if i &lt;= 70 { drop_check = 0 } else if i &gt; 70 { drop_check = 1 } // 파워업 드랍 확률
     angle = 0; 
-    lifetime = room_speed * 10 
+    lifetime = room_speed * 4 
     image_xscale = 0.8
     image_yscale = 0.8
 //    attack_repeat = 0;
@@ -147,6 +149,9 @@
     if hp &lt;= 0 {
     UI_SYS.var_score += 35
     audio_play_sound(sound_explosion_1,0,0)
+    if drop_check = 1 {
+    instance_create(x,y,obj_item_powerup)
+    }
     instance_create(x,y,obj_explosion_1)
     instance_destroy();
     }
