@@ -97,7 +97,7 @@
     draw_sprite_ext(spr_ui_score,0,388,2,0.5,0.5,0,c_white,1)                           //점수 글자
     draw_text_ext_transformed(332,22,var_highscore,10,1111110,1,1,0)                    //최고 점수
     draw_sprite_ext(spr_ui_score,1,238,2,0.5,0.5,0,c_white,1)                           //최고 점수 글자
-    
+    draw_sprite_ext(spr_fire_power,obj_f4u.fire_power,75,770,1,1,0,c_white,1)     
 </string>
           </argument>
         </arguments>

@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>
-    bullet_angle = obj_f4u.bullet_angle + irandom_range( -obj_f4u.fire_power ,obj_f4u.fire_power ) 
+    bullet_angle = obj_f4u.bullet_angle + irandom_range( -obj_f4u.fire_power_level ,obj_f4u.fire_power_level ) 
     bullet_speed = 35 + irandom_range(-5,5)
     image_angle = bullet_angle - 90
 </string>

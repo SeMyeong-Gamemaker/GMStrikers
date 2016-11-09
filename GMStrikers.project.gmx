@@ -64,10 +64,15 @@
         <sprite>sprites\spr_ui_button_Fire</sprite>
         <sprite>sprites\spr_ui_button_Bomb</sprite>
       </sprites>
+      <sprite>sprites\spr_fire_power</sprite>
     </sprites>
-    <sprite>sprites\sprite31</sprite>
-    <sprite>sprites\spr_item_powerup_small</sprite>
-    <sprite>sprites\spr_item_powerup_big</sprite>
+    <sprites name="Item">
+      <sprite>sprites\spr_item_powerup_big</sprite>
+      <sprite>sprites\spr_item_powerup_small</sprite>
+    </sprites>
+    <sprites name="Effect">
+      <sprite>sprites\spr_effect_explosion_1</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background_water_1</background>

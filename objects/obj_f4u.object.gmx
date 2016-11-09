@@ -88,7 +88,7 @@
     // 이동 제한
 
     x = clamp( x, 0+sprite_width/2, room_width-sprite_width/2  )
-    y = clamp( y, view_yview[0]+sprite_height/2, view_yview[0]+1600-sprite_width/2 )
+    y = clamp( y, view_yview[0]+95+sprite_height/2, view_yview[0]+1480-sprite_width/2 )
     hp = clamp(hp,0,100)
     
     
@@ -167,7 +167,7 @@
     y += lengthdir_y ( move_speed, move_angle );
     } 
     
-    if fire_power &gt;= 10
+    if fire_power &gt;= 11
     {
     fire_power_level ++;
     fire_power = 0;
