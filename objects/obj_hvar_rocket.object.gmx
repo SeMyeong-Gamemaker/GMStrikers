@@ -70,12 +70,7 @@
             <kind>1</kind>
             <string>
     rocket_angle = clamp( rocket_angle, 50, 130 )
-/*    if instance_number(obj_enemy_base) &gt; 0{
-    if ( ( near_enemy.x &lt; room_width ) &amp;&amp; ( near_enemy.x &gt; 0 ) &amp;&amp; ( near_enemy.y &lt; view_yview[0] + 1600 ) &amp;&amp; ( near_enemy.y &gt; view_yview[0] ) ) {
-    target_point = 0
-    }
-    }
-       
+
 
 </string>
           </argument>
@@ -111,10 +106,10 @@
     
     if follow_rockon &gt; 0 {
         if instance_number(obj_enemy_base) &gt; 0{
-            
-        near_enemy = instance_nearest( x, y, obj_enemy_base );
-        target_point = point_direction( x, y, near_enemy.x, near_enemy.y );
-            
+            near_enemy = instance_nearest( x, y, obj_enemy_base );
+            if ( ( near_enemy.x &lt; room_width ) &amp;&amp; ( near_enemy.x &gt; 0 ) &amp;&amp; ( near_enemy.y &lt; view_yview[0] + 1600 ) &amp;&amp; ( near_enemy.y &gt; view_yview[0] ) ) {    
+                target_point = point_direction( x, y, near_enemy.x, near_enemy.y );
+            } else target_point = 90
         } else target_point = 90
     }
     

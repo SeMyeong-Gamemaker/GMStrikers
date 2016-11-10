@@ -39,10 +39,19 @@
     KeyLeft = 0;
     KeyRight = 0;
     KeyFire = 0;
+    KeyExtraFire = 0;
+    
+    
     MouseUp = 0;
     MouseLeft = 0;
     MouseDown = 0;
     MouseRight = 0;
+    MouseUpLeft = 0;
+    MouseUpRight = 0;
+    MouseDownLeft = 0;
+    MouseDownRight = 0;
+    MouseFire = 0;
+    MouseExtraFire = 0;
 
     // 사격 관련
     fire_order = 1;        
@@ -59,7 +68,6 @@
     
     gun_type = 0
 
-    //fire_overheat = 0;
 
     audio_play_sound ( sound_engine_1 , 1 ,1 )
 </string>
@@ -131,6 +139,12 @@
     if MouseLeft { KeyLeft = true }
     if MouseDown { KeyDown = true }
     if MouseRight { KeyRight = true }
+    if MouseUpLeft { KeyUp = true KeyLeft = true }
+    if MouseUpRight { KeyUp = true KeyRight = true }
+    if MouseDownLeft { KeyDown = true KeyLeft = true }
+    if MouseDownRight { KeyDown = true KeyRight = true }
+    if MouseFire { KeyFire = true }
+    if MouseExtraFire { KeyExtraFire = true }
     
     // 이동 각도 설정 
     

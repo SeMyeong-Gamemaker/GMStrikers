@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y=view_yview[0]+1200
+            <string>y=view_yview[0]+1170
 </string>
           </argument>
         </arguments>
@@ -49,39 +49,52 @@
           <argument>
             <kind>1</kind>
             <string>    
-    if ( mouse_x &gt;= 24 &amp;&amp; mouse_x &lt;=  160 ) 
-    {
-        if ( mouse_y &gt;= view_yview[0]+1296 &amp;&amp; mouse_y &lt;= view_yview[0]+1432 )
-        {
+    if ( mouse_x &gt;= x &amp;&amp; mouse_x &lt;=  x +134 ) &amp;&amp; ( mouse_y &gt;= y + 135 &amp;&amp; mouse_y &lt;= y + 269 ) {
         if mouse_check_button(mb_left) {
-        obj_f4u.MouseLeft = true obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseRight = false } else obj_f4u.MouseLeft = false  // 왼쪽 
-        } 
-    } 
-    else if ( mouse_x &gt;= 160 &amp;&amp; mouse_x &lt;=  296 ) 
-    {
-        if ( mouse_y &gt;= view_yview[0]+1160 &amp;&amp; mouse_y &lt;= view_yview[0]+1304 )
-        {
-        if mouse_check_button(mb_left) {
-        obj_f4u.MouseUp = true obj_f4u.MouseLeft = false obj_f4u.MouseDown = false obj_f4u.MouseRight = false } else obj_f4u.MouseUp = false    // 위쪽
-        }
-    }
-    else if ( mouse_x &gt;= 160 &amp;&amp; mouse_x &lt;=  296 ) 
-    {
-        if ( mouse_y &gt;= view_yview[0]+1430 &amp;&amp; mouse_y &lt;= view_yview[0]+1560 ) 
-        {
-        if mouse_check_button(mb_left) {
-        obj_f4u.MouseDown = true obj_f4u.MouseUp = false obj_f4u.MouseLeft = false obj_f4u.MouseRight = false } else obj_f4u.MouseDown = false  // 아래쪽 
-        }
-    } 
-    else if ( mouse_x &gt;= 296 &amp;&amp; mouse_x &lt;=  428 ) 
-    {
-        if ( mouse_y &gt;= view_yview[0]+1288 &amp;&amp; mouse_y &lt;= view_yview[0]+1424 )
-        {
-        if mouse_check_button(mb_left) {
-        obj_f4u.MouseRight = true obj_f4u.MouseLeft = false obj_f4u.MouseUpft = false obj_f4u.MouseDownft = false } else obj_f4u.MouseRight = false // 오른쪽
-        }
-    }
+        obj_f4u.MouseLeft = true obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseRight = false obj_f4u.MouseUpLeft = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownLeft = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseLeft = false                  // 왼쪽 
+    } else obj_f4u.MouseLeft = false
     
+    if ( mouse_x &gt;= x + 135 &amp;&amp; mouse_x &lt;=  x + 269 ) &amp;&amp; ( mouse_y &gt;= y &amp;&amp; mouse_y &lt;= y + 134 ) {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseUp = true obj_f4u.MouseLeft = false obj_f4u.MouseDown = false obj_f4u.MouseRight = false obj_f4u.MouseUpLeft = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownLeft = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseUp = false                    // 위쪽
+    } else obj_f4u.MouseUp = false
+    
+    if ( mouse_x &gt;= x + 135 &amp;&amp; mouse_x &lt;= x + 269 ) &amp;&amp; ( mouse_y &gt;= y + 270 &amp;&amp; mouse_y &lt;= y + 404 ) 
+    {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseDown = true obj_f4u.MouseUp = false obj_f4u.MouseLeft = false obj_f4u.MouseRight = false obj_f4u.MouseUpLeft = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownLeft = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseDown = false                  // 아래쪽 
+    } else obj_f4u.MouseDown = false
+    
+    
+    if ( mouse_x &gt;= x + 270 &amp;&amp; mouse_x &lt;= x + 404 ) &amp;&amp; ( mouse_y &gt;= y + 135 &amp;&amp; mouse_y &lt;= y + 269 )
+    {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseRight = true obj_f4u.MouseLeft = false obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseUpLeft = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownLeft = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseRight = false                 // 오른쪽
+    } else obj_f4u.MouseRight = false   
+    
+    if ( mouse_x &gt;= x + 5 &amp;&amp; mouse_x &lt;= x + 129 ) &amp;&amp; ( mouse_y &gt;= y + 5 &amp;&amp; mouse_y &lt;= y + 129 )
+    {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseUpLeft = true obj_f4u.MouseRight = false obj_f4u.MouseLeft = false obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownLeft = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseUpLeft = false                // 왼쪽위
+    } else obj_f4u.MouseUpLeft = false
+    
+    if ( mouse_x &gt;= x + 275 &amp;&amp; mouse_x &lt;= x + 399 ) &amp;&amp; ( mouse_y &gt;= y + 5 &amp;&amp; mouse_y &lt;= y + 129 )
+    {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseUpRight = true obj_f4u.MouseRight = false obj_f4u.MouseLeft = false obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseUpLeft = false obj_f4u.MouseDownLeft = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseUpRight = false               // 오른쪽위
+    } else obj_f4u.MouseUpRight = false
+    
+    if ( mouse_x &gt;= x + 5 &amp;&amp; mouse_x &lt;= x + 129 ) &amp;&amp; ( mouse_y &gt;= y + 275 &amp;&amp; mouse_y &lt;= y + 399 )
+    {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseDownLeft = true obj_f4u.MouseRight = false obj_f4u.MouseLeft = false obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseUpLeft = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownRight = false } else obj_f4u.MouseDownLeft = false              // 왼쪽아래
+    } else obj_f4u.MouseDownLeft = false
+    
+    if ( mouse_x &gt;= x + 275 &amp;&amp; mouse_x &lt;= x + 399 ) &amp;&amp; ( mouse_y &gt;= y + 275 &amp;&amp; mouse_y &lt;= y + 399 )
+    {
+        if mouse_check_button(mb_left) {
+        obj_f4u.MouseDownRight = true obj_f4u.MouseRight = false obj_f4u.MouseLeft = false obj_f4u.MouseUp = false obj_f4u.MouseDown = false obj_f4u.MouseUpLeft = false obj_f4u.MouseUpRight = false obj_f4u.MouseDownLeft = false } else obj_f4u.MouseDownRight = false             // 오른쪽아래
+    } else obj_f4u.MouseDownRight = false
 </string>
           </argument>
         </arguments>
