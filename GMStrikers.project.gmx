@@ -29,7 +29,6 @@
       <sprite>sprites\spr_a6m</sprite>
       <sprites name="A6M2">
         <sprite>sprites\spr_a6m2</sprite>
-        <sprite>sprites\sprite32</sprite>
         <sprite>sprites\spr_a6m2_turn_left</sprite>
         <sprite>sprites\spr_a6m2_turn_right</sprite>
       </sprites>
@@ -57,6 +56,7 @@
         <sprite>sprites\spr_ui_button</sprite>
         <sprite>sprites\spr_ui_button_Fire</sprite>
         <sprite>sprites\spr_ui_button_Bomb</sprite>
+        <sprite>sprites\spr_ui_button_Option</sprite>
       </sprites>
       <sprite>sprites\spr_fire_power</sprite>
     </sprites>
@@ -112,6 +112,7 @@
         <object>objects\obj_ui_button</object>
         <object>objects\obj_ui_fire_button</object>
         <object>objects\obj_ui_extra_fire_button</object>
+        <object>objects\obj_ui_button_Option</object>
       </objects>
       <object>objects\UI_SYS</object>
     </objects>
@@ -121,6 +122,7 @@
     <objects name="Item">
       <object>objects\obj_item_powerup</object>
     </objects>
+    <object>objects\obj_draw_shadow</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
