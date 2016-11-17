@@ -74,13 +74,16 @@ time = 0;
     } else if UI_SYS.time = room_speed * 16 {
     attack_mode = 3;
     spawn_remain = 5; 
-    } else if UI_SYS.time = room_speed * 18 {
+    } else if UI_SYS.time = room_speed * 22 {
     attack_mode = 4;
-    spawn_remain = 6;
+    spawn_remain = 5;
+    } else if UI_SYS.time = room_speed * 32 {
+    attack_mode = 2;
+    spawn_remain = 3; 
+    } else if UI_SYS.time = room_speed * 36 {   
+    attack_mode = 1;
+    spawn_remain = 3; 
     }
-    
-    
-    
 </string>
           </argument>
         </arguments>

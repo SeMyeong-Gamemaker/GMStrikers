@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-999999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -83,18 +83,23 @@
             <string>
     draw_set_halign ( fa_right )
     draw_set_font ( font_number )
-    draw_sprite_ext(spr_ui_hp_bar,spr_f4u.hp,7,view_yview[0] + 5,1,1,0,c_white,1)      ;            //체력바
+    draw_sprite_ext(spr_ui_hp_bar,spr_f4u.hp,10,view_yview[0] + 10,1,1,0,c_white,1)      ;            //체력바
+
     draw_sprite_ext(spr_ui_text_gun_type,spr_f4u.gun_type,310,view_yview[0] + 18,1,1,0,c_white,1);  //주무장
     draw_sprite_ext(spr_ui_text_gun_type,2,310,view_yview[0] + 48,1,1,0,c_white,1)             ;    //보조무장
     draw_sprite_ext(spr_ui_score,0,788,view_yview[0] + 2,1,1,0,c_white,1)                           //점수 글자
     draw_sprite_ext(spr_ui_score,1,438,view_yview[0] + 2,1,1,0,c_white,1)                           //최고 점수 글자
-    draw_sprite_ext(spr_fire_power,obj_f4u.fire_power,670,view_yview[0] + 1510,1,1,0,c_white,1)       //파워업 게이지
+    
+    draw_sprite_ext(spr_fire_power,obj_f4u.fire_power,730,view_yview[0] + 1560,1,1,0,c_white,1)     //파워업 게이지
+    draw_sprite_ext(spr_fire_power_bar,obj_f4u.fire_power,580+obj_f4u.fire_power*15,view_yview[0] + 1560,obj_f4u.fire_power/10,1,0,c_white,1)
+    draw_sprite_ext(spr_ui_text_gun_type,4,540,view_yview[0] + 1560,1,1,0,c_white,1)
     
     
     draw_text_ext_transformed(400,view_yview[0] + 36,obj_f4u.extra_ra,10,1111110,2,2,0)             //부무장 잔탄수
     draw_text_ext_transformed(898,view_yview[0] + 40,var_score,10,1111110,2,2,0)                    //점수
     draw_text_ext_transformed(628,view_yview[0] + 40,var_highscore,10,1111110,2,2,0)                //최고 점수
-    if obj_f4u.gun_type = 0 {;
+    draw_text_ext_transformed(570,view_yview[0] + 1548,obj_f4u.fire_power_level,10,1111110,2,2,0) 
+    if obj_f4u.gun_type = 0 {
     draw_sprite_ext(spr_ui_text_gun_type,3,378,view_yview[0] + 18,1,1,0,c_white,1)
     } else draw_text_ext_transformed(400,view_yview[0] + 12,'12313312',10,1111110,1,1,0)            //주무장 잔탄수
    
